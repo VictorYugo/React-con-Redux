@@ -5,8 +5,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import CantidadProducto from './components/CantidadProducto';
 import CompraProducto from './components/CompraProducto';
+import store from './redux/store';
 
 function App() {
+
+  console.log(store.getState());
+
   return (
     <div className="App container">
       <div className="row">
