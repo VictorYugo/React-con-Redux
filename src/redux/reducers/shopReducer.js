@@ -19,9 +19,7 @@ const product_shop = (state = default_product_shop, action) => {
             }
         }
     
-        default: return {
-            state
-        }
+        default: return state;
     }
 }
 

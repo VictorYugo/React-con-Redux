@@ -7,12 +7,13 @@ import CantidadProducto from './components/CantidadProducto';
 import CompraProducto from './components/CompraProducto';
 import store from './redux/store';
 
+import { Provider } from 'react-redux';
+
 function App() {
 
-  console.log(store.getState());
-
   return (
-    <div className="App container">
+    <Provider store={store}>
+      <div className="App container">
       <div className="row">
         <div className="col-12">
           <div className="card mt-5" style={{maxWidth: '370px'}}>
@@ -33,6 +34,8 @@ function App() {
         </div>
       </div>
     </div>
+    </Provider>
+    
   );
 }
 

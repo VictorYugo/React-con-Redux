@@ -1,13 +1,20 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
 class CantidadProducto extends Component{
     render(){
         return (
             <React.Fragment>
-                Unidades: 15
+                Unidades: {this.props.product_shop.producto}
             </React.Fragment>
         )
     }
 }
 
-export default CantidadProducto
+const mapStateToProps = (state) => {
+    return{
+        product_shop: state.product_shop
+    }
+}
+
+export default connect(mapStateToProps) (CantidadProducto);
