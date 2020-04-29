@@ -3,11 +3,17 @@ import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import CantidadProducto from './components/CantidadProducto';
-import CompraProducto from './components/CompraProducto';
-import store from './redux/store';
 
+//import CantidadProducto from './components/CantidadProducto';
+//import CompraProducto from './components/CompraProducto';
+
+import store from './redux/store';
 import { Provider } from 'react-redux';
+
+import CantidadProductoHook from './components/cantidadProducto_Hook';
+import CompraProductoHook from './components/compraProducto_Hook';
+import BuscadorProducto from './components/buscador/BuscadorProducto';
+import ResultadoProducto from './components/buscador/ResultadoProducto';
 
 function App() {
 
@@ -24,13 +30,19 @@ function App() {
               <div className="col-8">
                 <div className="card-body">
                   <div className="card-title h3 text-center">
-                    <CantidadProducto></CantidadProducto>
+                    <CantidadProductoHook></CantidadProductoHook>
                   </div>
-                  <CompraProducto></CompraProducto>
+                  <CompraProductoHook></CompraProductoHook>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="col-12 mt-4 border-top pt-3">
+          <BuscadorProducto></BuscadorProducto>
+        </div>
+        <div className="col-12">
+          <ResultadoProducto></ResultadoProducto>
         </div>
       </div>
     </div>
